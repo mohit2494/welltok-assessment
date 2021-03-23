@@ -30,8 +30,8 @@ try:
     if dbhelper.init_failed:
         raise Exception('Unable to connect to database. Please contact tools team at welltoktools@gmail.com')
     dbhelper.reload()
-    print("Database reloaded using "+args.filename)
+    print("Database reloaded. Try running campaign_cost with new data.")
 except Exception as e:
     print(e)
-    logger.debug('Error reloading database using file: '+args.filename+" :"+str(e))
+    logger.error('Error reloading database using file:')
     

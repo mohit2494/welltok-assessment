@@ -16,7 +16,7 @@
     "base_fee":{
         "1":{
             "channel_id":"1",
-            "price":"1500"
+            "price":"15000"
         },
         "2":{
             "channel_id":"2",

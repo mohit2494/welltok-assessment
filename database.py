@@ -48,7 +48,6 @@ class DBHelper(object):
 
     def insert_into_tables(self):
         validated_data = self.setup_object.read_config()
-        print(validated_data)
         try:
             cur = self.con.cursor()
             cur.execute('begin')
