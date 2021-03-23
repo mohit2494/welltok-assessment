@@ -21,7 +21,7 @@ def check_positive(value):
                 "%s is negative/zero value. Please provide a positive value" % value)
     except:
         raise argparse.ArgumentTypeError(
-                "%s is an alphanumeric/text value. Please provide an int value" % value)
+            "%s is an alphanumeric/text value. Please provide an int value" % value)
     return ivalue
 
 
@@ -41,9 +41,11 @@ def check_channels_and_store_ids(value):
             raise argparse.ArgumentTypeError(
                 "channel %s not found in configuration." % channel)
 
+
 dbhelper = DBHelper()
 if dbhelper.init_failed:
-    raise Exception('Unable to connect to database. Please contact welltoktools@gmail.com')
+    raise Exception(
+        'Unable to connect to database. Please contact welltoktools@gmail.com')
 if not dbhelper.check_tables_exist():
     dbhelper.create_and_insert(reload=True)
 

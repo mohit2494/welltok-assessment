@@ -35,4 +35,3 @@ class Setup(object):
     def __init__(self, config_file=None):
         self.configvalidator = ConfigValidator()
         self.config_file = config_file if config_file else self.CONFIG_PATH
-        print(self.config_file)

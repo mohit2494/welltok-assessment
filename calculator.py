@@ -15,7 +15,7 @@ def calculate_cost(dbhelper, audience_size, channel_id_list, showbreakup):
             print('Channel : '+dbhelper.get_channel_name(channel_id))
         base_fee = dbhelper.get_base_fee(channel_id=channel_id)
         if showbreakup:
-            print('Base Fee : $'+str(round(base_fee,2))+' for ' +
+            print('Base Fee : $'+str(round(base_fee, 2))+' for ' +
                   str(range_info[0][1]) + ' users')
         cost += base_fee
         channel_cost += base_fee
@@ -23,7 +23,7 @@ def calculate_cost(dbhelper, audience_size, channel_id_list, showbreakup):
             trans_fee = dbhelper.get_trans_fee(
                 range_id=range_id, channel_id=channel_id)
             if showbreakup:
-                print('Transaction Fee : $'+str(round(trans_fee*size,2)) +
+                print('Transaction Fee : $'+str(round(trans_fee*size, 2)) +
                       ' for '+str(size)+' users')
             cost += size*trans_fee
             channel_cost += size*trans_fee
