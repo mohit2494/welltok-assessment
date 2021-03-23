@@ -58,4 +58,4 @@ parser.add_argument("--showbreakup", help="flag for showing how the total cost w
 args = parser.parse_args()
 
 cost = calculate_cost(dbhelper, args.size, channel_id_list, args.showbreakup)
-print("Total Campaign Cost : $" + str(cost))
+print("Total Campaign Cost : $" + str(round(cost,2)))

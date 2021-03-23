@@ -28,6 +28,6 @@ def calculate_cost(dbhelper, audience_size, channel_id_list, showbreakup):
             cost += size*trans_fee
             channel_cost += size*trans_fee
         if showbreakup:
-            print("Total Channel Cost : $" + str(channel_cost))
+            print("Total Channel Cost : $" + str(round(channel_cost,2)))
             print("-------------------------------------------------")
     return cost
