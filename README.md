@@ -45,6 +45,7 @@
 
 - Due to lack of time other unique and foreign key validations are not done on config.json data and I'm leveraging the database error handling for it.
 - I've considered the range of user count from `[0, 1 Billion]` which can be easily tweaked
+- This solution needs Python 3.7 as a prerequisite. Please install Python before running this util.
 
 ---
 
