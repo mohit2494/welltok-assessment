@@ -40,22 +40,24 @@ def check_channels_and_store_ids(value):
         if not channel_id:
             raise argparse.ArgumentTypeError(
                 "channel %s not found in configuration." % channel)
+try:
+    dbhelper = DBHelper()
+    if dbhelper.init_failed:
+        raise Exception(
+            'Unable to connect to database. Please contact welltoktools@gmail.com')
+    if not dbhelper.check_tables_exist():
+        dbhelper.reload()
 
-dbhelper = DBHelper()
-if dbhelper.init_failed:
-    raise Exception(
-        'Unable to connect to database. Please contact welltoktools@gmail.com')
-if not dbhelper.check_tables_exist():
-    dbhelper.reload()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--size", help="helps specify audience size for cost calculation",
+                        type=check_positive, required=True)
+    parser.add_argument("--channels", help="helps specify the channels pipe separated. Eg: SMS|DM|EM for sms, direct mail and email",
+                        type=check_channels_and_store_ids, required=True)
+    parser.add_argument("--showbreakup", help="flag for showing how the total cost was calculated",
+                        dest='showbreakup', action="store_true")
+    args = parser.parse_args()
 
-parser = argparse.ArgumentParser()
-parser.add_argument("--size", help="helps specify audience size for cost calculation",
-                    type=check_positive, required=True)
-parser.add_argument("--channels", help="helps specify the channels pipe separated. Eg: SMS|DM|EM for sms, direct mail and email",
-                    type=check_channels_and_store_ids, required=True)
-parser.add_argument("--showbreakup", help="flag for showing how the total cost was calculated",
-                    dest='showbreakup', action="store_true")
-args = parser.parse_args()
-
-cost = calculate_cost(dbhelper, args.size, channel_id_list, args.showbreakup)
-print("Total Campaign Cost : $" + str(round(cost,2)))
+    cost = calculate_cost(dbhelper, args.size, channel_id_list, args.showbreakup)
+    print("Total Campaign Cost : $" + str(round(cost,2)))
+except Exception as e:
+    logger.error(e)
