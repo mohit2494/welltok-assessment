@@ -14,10 +14,14 @@ logger = logging.getLogger(__name__)
 channel_id_list = []
 
 def check_positive(value):
-    ivalue = int(value)
-    if ivalue <= 0:
+    try:
+        ivalue = int(value)
+        if ivalue <= 0:
+            raise argparse.ArgumentTypeError(
+                "%s is negative/zero value. Please provide a positive value" % value)
+    except:
         raise argparse.ArgumentTypeError(
-            "%s is negative/zero value. Please provide a positive value" % value)
+                "%s is an alphanumeric/text value. Please provide an int value" % value)
     return ivalue
 
 
