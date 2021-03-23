@@ -1,0 +1,131 @@
+{
+    "channels":{
+        "1":{
+            "name":"Email", 
+            "code":"em"
+        },
+        "2":{
+            "name":"SMS",
+            "code":"sms"
+        },
+        "3":{
+            "name":"Direct Mail",
+            "code":"dm"
+        }
+    },
+    "base_fee":{
+        "1":{
+            "channel_id":"1",
+            "price":"1500"
+        },
+        "2":{
+            "channel_id":"2",
+            "price":"1800"
+        },
+        "3":{
+            "channel_id":"3",
+            "price":"8000"
+        }
+    },
+    "range":{
+        "1" :{
+            "from":"0",
+            "to":"5000"
+        },
+        "2" :{
+            "from":"5001",
+            "to":"15000"
+        },
+        "3" :{
+            "from":"15001",
+            "to":"25000"
+        },
+        "4" :{
+            "from":"25001",
+            "to":"50000"
+        },
+        "5" :{
+            "from":"50001",
+            "to":"1000000000"
+        }
+    },
+    "trans_fee":{
+        "1" :{
+            "range_id":"1",
+            "channel_id":"1",
+            "price":"0"
+        },
+        "2" :{
+            "range_id":"1",
+            "channel_id":"2",
+            "price":"0"
+        },
+        "3" :{
+            "range_id":"1",
+            "channel_id":"3",
+            "price":"0"
+        },
+        "4" :{
+            "range_id":"2",
+            "channel_id":"1",
+            "price":"0.66"
+        },
+        "5" :{
+            "range_id":"2",
+            "channel_id":"2",
+            "price":"1.10"
+        },
+        "6" :{
+            "range_id":"2",
+            "channel_id":"3",
+            "price":"1.56"
+        },
+        "7" :{
+            "range_id":"3",
+            "channel_id":"1",
+            "price":"0.42"
+        },
+        "8" :{
+            "range_id":"3",
+            "channel_id":"2",
+            "price":"0.57"
+        },
+        "9" :{
+            "range_id":"3",
+            "channel_id":"3",
+            "price":"1.00"
+        },
+        "10" :{
+            "range_id":"4",
+            "channel_id":"1",
+            "price":"0.27"
+        },
+        "11" :{
+            "range_id":"4",
+            "channel_id":"2",
+            "price":"0.41"
+        },
+        "12" :{
+            "range_id":"4",
+            "channel_id":"3",
+            "price":"0.70"
+        },
+        "13" :{
+            "range_id":"5",
+            "channel_id":"1",
+            "price":"0.17"
+        },
+        "14" :{
+            "range_id":"5",
+            "channel_id":"2",
+            "price":"0.25"
+        },
+        "15" :{
+            "range_id":"5",
+            "channel_id":"3",
+            "price":"0.62"
+        }
+    }
+
+
+}
