@@ -41,13 +41,12 @@ def check_channels_and_store_ids(value):
             raise argparse.ArgumentTypeError(
                 "channel %s not found in configuration." % channel)
 
-
 dbhelper = DBHelper()
 if dbhelper.init_failed:
     raise Exception(
         'Unable to connect to database. Please contact welltoktools@gmail.com')
 if not dbhelper.check_tables_exist():
-    dbhelper.create_and_insert(reload=True)
+    dbhelper.reload()
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--size", help="helps specify audience size for cost calculation",
@@ -55,8 +54,6 @@ parser.add_argument("--size", help="helps specify audience size for cost calcula
 parser.add_argument("--channels", help="helps specify the channels pipe separated. Eg: SMS|DM|EM for sms, direct mail and email",
                     type=check_channels_and_store_ids, required=True)
 parser.add_argument("--showbreakup", help="flag for showing how the total cost was calculated",
-                    dest='showbreakup', action="store_true")
-parser.add_argument("--reloadconfig", help="if you changed config.json, use this flag to load tables in database",
                     dest='showbreakup', action="store_true")
 args = parser.parse_args()
 
