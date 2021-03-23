@@ -1,10 +1,6 @@
 
-![test](https://user-images.githubusercontent.com/8799954/112210638-51c24f00-8bf1-11eb-84a8-7b88650dbea8.mp4)
+[![Welltok Campaign Cost Calculator](https://images.unsplash.com/photo-1594980596870-8aa52a78d8cd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=925&q=80)](https://user-images.githubusercontent.com/8799954/112210638-51c24f00-8bf1-11eb-84a8-7b88650dbea8.mp4)
 
-
-
-
-https://user-images.githubusercontent.com/8799954/112210736-6ef71d80-8bf1-11eb-8857-7afe92755e95.mp4
 
 # Welltok Campaign Cost Calculator
 
@@ -55,7 +51,7 @@ https://user-images.githubusercontent.com/8799954/112210736-6ef71d80-8bf1-11eb-8
 #### Demo Videos
 
 - I've included 2 videos namely `Demo.mp4` and `Design.mp4`. The first one shows the utility works and the second one briefly explains the design of code and other considerations. Given more time, it'd have been interesting to draw the UML and ER diagram.
-
+- Design Considerations - https://user-images.githubusercontent.com/8799954/112210736-6ef71d80-8bf1-11eb-8857-7afe92755e95.mp4
 ---
 
 Email ID : `mohit.kalra@ufl.edu`
