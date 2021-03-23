@@ -1,0 +1,9 @@
+DEBUG:database:starting to create tables
+DEBUG:database:Table channels created
+DEBUG:database:Table range created
+DEBUG:database:Table base_fee created
+DEBUG:database:Table trans_fee created
+DEBUG:setup:Opening config.json at ./config.json
+DEBUG:setup:Config file opened successfully, Validating
+DEBUG:configvalidator:Found overlapping/missing range (15001, 25000) and (24000, 50000)
+ERROR:__main__:Error reloading database using file: Found overlapping/missing range (15001, 25000) and (24000, 50000)
